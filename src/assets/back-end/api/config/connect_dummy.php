@@ -1,9 +1,9 @@
 <?php
   function connect_dummy(){
   $servername = "sql10.freesqldatabase.com";
-  $username = "sql10484534";
-  $password = "vVtLPiqX62";
-  $db = "sql10484534";
+  $username = "sql10487303";
+  $password = "TLx8PRLJwK";
+  $db = "sql10487303";
   
   // Create connection
   
