@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+src/index.html
+src/assets/back-end/dummy DB/dummydata.create.sql.bak
+src/index.html.bak
