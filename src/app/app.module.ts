@@ -15,16 +15,18 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AddbookComponent } from './addbook/addbook.component';
-
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
+
+
+
 import { SearchComponent } from './search/search.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { BookshelfComponent } from './bookshelf/bookshelf.component';
 import { BookContentComponent } from './book-content/book-content.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -40,6 +42,7 @@ import { BookContentComponent } from './book-content/book-content.component';
     CarouselComponent,
     BookshelfComponent,
     BookContentComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { BookContentComponent } from './book-content/book-content.component';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
