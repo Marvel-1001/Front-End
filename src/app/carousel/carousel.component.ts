@@ -12,5 +12,6 @@ export class CarouselComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ login = 'assets\img\carousel1.jpg';
+ Alt = 'img';
 }

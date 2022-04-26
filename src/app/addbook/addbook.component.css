@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 h1 {
@@ -40,11 +40,11 @@ section-p1 {
 section-m1 {
     margin: 40px 0;
 }
-/*
+
 body {
     width: 100%;
 }
-*/
+
 .pro-container {
     padding: 40px 20px;
 }
@@ -67,7 +67,7 @@ body {
     width: 23%;
     min-width: 250px;
     padding: 10px 12px;
-    border-radius: 25px;
+    border-radius: 0;
     border: 1px solid #cce7d0;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -81,7 +81,7 @@ body {
 
 #product1 .pro img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 0;
 }
 
 #product1 .pro .des {
@@ -100,58 +100,11 @@ body {
     font-size: 14px;
 }
 
-img {
-
-    width: 320px;
-    height: 320px;
-    align-items: flex-start;
-}
-
 
 /*New CSS*/
 
 .broad {
     padding: 0 5px;
     margin: auto;
-    max-width: 900px;
-}
-
-
-/**Sorting**/
-
-.btn:focus {
-    outline: none!important;
-    background-color: #c8c8c8;
-}
-
-.btn-primary {
-    background-color: #fff;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #c8c8c8;
-}
-
-.col-lg-4{
-    display: flex;
-}
-
-.book-item{
-    border: 1px solid #e8e8e8;
-    border-radius: 4px;
-    position: relative;
-}
-
-.book-img:hover::after{
-    max-width: 100px;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.01);
-    z-index: 1;
-    cursor: pointer;
+    max-width: 1200px;
 }
