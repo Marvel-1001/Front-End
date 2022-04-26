@@ -27,6 +27,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { BookshelfComponent } from './bookshelf/bookshelf.component';
 import { BookContentComponent } from './book-content/book-content.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -43,6 +45,7 @@ import { FooterComponent } from './footer/footer.component';
     BookshelfComponent,
     BookContentComponent,
     FooterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
