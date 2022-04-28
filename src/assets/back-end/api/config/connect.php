@@ -1,13 +1,13 @@
 <?php
 
-$servername = "MOE-ART028-NB02";
-$username = "MOE-ART028-NB02\mwand";
-$pwd = "";
-$db = "LiteratureDatabase";
+$servername = "(local)\SQLEXPRESS";
+$username = "sa";
+$pwd = "sqladpass";
+$db = "literatureB";
 
 try {
-  $conn = new PDO("sqlsrv:Server=$servername;database=$db", NULL, NULL);
-  // set the PDO error mode to yexception
+  $conn = new PDO("sqlsrv:Server=$servername;database=$db", $username, $pwd);
+  // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "Connected successfully";
 } catch(PDOException $e) {
@@ -16,7 +16,7 @@ try {
   //fall back to dummyDB
   include 'connect_dummy.php';
   return connect_dummy();
-} 
+}
 
 return $conn;
-?> 
+?>
