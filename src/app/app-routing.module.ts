@@ -6,7 +6,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { BookshelfComponent } from './bookshelf/bookshelf.component';
 import { BookContentComponent } from './book-content/book-content.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -25,13 +25,14 @@ const routes: Routes = [
     path: 'search/:searchTerm', component:HomeComponent
   },
   { 
-    path: 'bookshelf', component:BookshelfComponent},
+    path: 'bookshelf', component:BookshelfComponent
+  },
+
   { 
-    
     path: 'book-content', component:BookContentComponent
   },
-  {
-    path: 'sign-in', component:SignInComponent
+  { 
+    path: 'home/login', component:LoginComponent
   }
 
 ];

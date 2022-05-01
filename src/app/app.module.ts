@@ -42,23 +42,55 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { LoginComponent } from './login/login.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,AddbookComponent,NavbarComponent,HomeComponent,AboutUsComponent,
-    ContactUsComponent,SearchComponent,CarouselComponent,BookshelfComponent,
-    BookContentComponent,FooterComponent,SignInComponent,
+    AppComponent,
+    AddbookComponent,
+    NavbarComponent,
+    HomeComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    SearchComponent,
+    CarouselComponent,
+    BookshelfComponent,
+    BookContentComponent,
+    FooterComponent,
+    LoginComponent,
   ],
   imports: [
-    BrowserModule,AppRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule,
-    BrowserAnimationsModule,MatToolbarModule,MatButtonToggleModule,MatButtonModule,
-    MatIconModule,MatFormFieldModule,MatInputModule,MatButtonModule,
-    MdbAccordionModule,MdbCarouselModule,MdbCheckboxModule,MdbCollapseModule,
-    MdbDropdownModule,MdbFormsModule,MdbModalModule,MdbPopoverModule,MdbRadioModule,
-    MdbRangeModule,MdbRippleModule,MdbScrollspyModule,MdbTabsModule,MdbTooltipModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonToggleModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MDBBootstrapModule.forRoot(),
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
     MdbValidationModule
   ],
   providers: [],

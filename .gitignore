@@ -31,6 +31,19 @@ chrome-profiler-events*.json
 .history/*
 
 # misc
+/src/assets/back-end/db/DML/update
+/src/assets/back-end/db/DML/call
+/src/assets/back-end/db/DML/delete
+/src/assets/back-end/db/DML/merge
+/src/assets/back-end/db/DML/explain plan
+/src/assets/back-end/db/DML/lock table
+/src/assets/back-end/db/DDL/drop/*
+/src/assets/back-end/db/DDL/rename/*
+/src/assets/back-end/db/DDL/alter/*
+/src/assets/back-end/db/DDL/truncate/*
+/src/assets/back-end/db/DDL/comment/*
+/src/assets/back-end/dummy DB/old/*
+
 /.angular/cache
 /.sass-cache
 /connect.lock
@@ -45,5 +58,5 @@ testem.log
 .DS_Store
 Thumbs.db
 src/index.html
-src/assets/back-end/dummy DB/dummydata.create.sql.bak
+src/assets/back-end/dummy DB/*
 src/index.html.bak
