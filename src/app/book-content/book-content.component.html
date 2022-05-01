@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <form #bookDetails="ngForm" class="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="myForm" class="form" (ngSubmit)="onSubmit()">
       <div class="wrapperThree">
   
       <div >
@@ -11,7 +11,7 @@
               type="file" 
               class="form-control"
               (change)="onFileChange($event)">
-          
+              <span style="color:red" *ngIf="image && image.invalid && image.touched">Image is required</span>
       </div>
       <div style="width: 120px; height:170px; background:gray; margin:10px">
       <img [src]="imageSrc" *ngIf="imageSrc" style="height: 170px; width:120px; margin: auto;" >

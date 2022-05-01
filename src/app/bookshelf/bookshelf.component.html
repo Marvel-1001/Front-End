@@ -1,8 +1,6 @@
-
-
             <div class="wrapper">
               
-                <form #bookDetails="ngForm" class="form" (ngSubmit)="onSubmit()" >
+                <form [formGroup]="bookForm" class="form" (ngSubmit)="onSubmit()" >
                 
                       <div class="wrapperOne">
                         <h4><b>Language</b></h4>
@@ -35,10 +33,11 @@
                                 <p>Enter the book title as it appears on the cover</p>
                                     <br>
                                     <mat-label for="bookTitle">Book Title</mat-label>
-                                    <input matInput class="form-control" id="exampleInputName" required type="text" name="bookTitle" ngModel>
+                                    <input matInput class="form-control" formControlName="title" type="text" name="bookTitle" ngModel>
+                                    <span style="color:red" *ngIf="title && title.invalid && title.touched">Title is required</span>
                                     <br>
                                     <mat-label form="subtitle">Subtitle <a>(optional)</a></mat-label>
-                                    <input matInput class="form-control" type="text" id="exampleInputName" name="bookSubtitle" ngModel>
+                                    <input matInput class="form-control" type="text" name="bookSubtitle" ngModel>
                                 </div>
                           </div>
                
@@ -49,7 +48,7 @@
                               <p>Enter the edition number as it appears on the cover</p>
                                 <br>
                                   <mat-label for="exampleInputNumber1">Edition Number <a>(optional)</a></mat-label>
-                                  <input matInput type="number" class="form-control" id="exampleInputNumber1" name="numberValue" ngModel>
+                                  <input matInput type="number" class="form-control" name="numberValue" ngModel>
                           </div>
                   </div>
                   <div class="wrap">
@@ -57,8 +56,8 @@
                         <br>
                           <mat-label for="primaryAuthor">Primary Author or Contributor</mat-label>
                         <br>
-                          <input matInput required type="text" class="form-control" id="exampleInputName" name="authorName" ngModel>
-                          
+                          <input matInput type="text" formControlName="author" class="form-control" name="authorName">
+                          <span style="color:red" *ngIf="author && author.invalid && author.touched">Author is required</span>
                   </div>
                   <div class="wrapC">
                       <header><b>Contributor</b></header>
@@ -98,7 +97,8 @@
                         <br>
                           <p>Enter the synopsis of the book</p>
                             <mat-label>Synopsis</mat-label>
-                            <textarea matInput required></textarea>
+                            <textarea matInput></textarea>
+                            <span style="color:red" *ngIf="synopsis && synopsis.invalid && synopsis.touched">Synopsis is required</span>
                   </div>
                   <div class="wrapper5">
                       <header><b>Keywords</b></header>
@@ -114,7 +114,7 @@
                             <input matInput type="text">
                   </div>
                 
-                <button class="btn-btn-primary" md-button md-raised-button [routerLink]="['/book-content/']"> Save and Continue</button>
+                <button class="btn-btn-primary" md-button md-raised-button [routerLink]="['/book-content/']" [disabled]="bookForm.invalid"> Save and Continue</button>
                   <!-- The routed views render in the <router-outlet>-->
                   <router-outlet></router-outlet>
               </form>

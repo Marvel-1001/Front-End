@@ -13,7 +13,8 @@ export class BookContentComponent implements OnInit {
   myForm = new FormGroup({
    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
    file: new FormControl('', [Validators.required]),
-   fileSource: new FormControl('', [Validators.required])
+   fileSource: new FormControl('', [Validators.required]),
+   image:new FormControl('', [Validators.required])
  });
  
  constructor(private http: HttpClient) { }
@@ -22,6 +23,10 @@ export class BookContentComponent implements OnInit {
    return this.myForm.controls;
  }
   
+ get image(){
+  return this.myForm.get('image');
+}
+
  onFileChange(event: any) {
    const reader = new FileReader();
    
