@@ -44,6 +44,7 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { LoginComponent } from './login/login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
@@ -61,6 +62,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     BookContentComponent,
     FooterComponent,
     LoginComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
