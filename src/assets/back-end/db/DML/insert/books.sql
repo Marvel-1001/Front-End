@@ -1,7 +1,7 @@
 USE [literatureDB]
 GO
 
-INSERT INTO [nanc].[Books]
+INSERT INTO [nc].[Books]
            ([ISBN]
            ,[book_name]
            ,[title]
@@ -12,7 +12,9 @@ INSERT INTO [nanc].[Books]
            ,[year_published]
            ,[language]
            ,[image_ref]
-           ,[synopsis])
+           ,[synopsis]
+           ,[page_count]
+           ,[time_added])
      VALUES
            (<ISBN, varchar(17),>
            ,<book_name, varchar(255),>
@@ -24,7 +26,9 @@ INSERT INTO [nanc].[Books]
            ,<year_published, date,>
            ,<language, varchar(100),>
            ,<image_ref, varchar(500),>
-           ,<synopsis, varchar(1000),>)
+           ,<synopsis, varchar(1000),>
+           ,<page_count, int,>
+           ,<time_added, datetime2(7),>)
 GO
 
 

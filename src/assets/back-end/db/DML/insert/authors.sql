@@ -1,7 +1,7 @@
 USE [literatureDB]
 GO
 
-INSERT INTO [nanc].[Authors]
+INSERT INTO [nc].[Authors]
            ([author_id]
            ,[first_name]
            ,[last_name]

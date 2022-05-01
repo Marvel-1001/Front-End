@@ -1,14 +1,14 @@
 USE [literatureDB]
 GO
 
-/****** Object:  Table [nanc].[Users]    Script Date: 26/04/2022 11:16:11 am ******/
+/****** Object:  Table [nc].[Users]    Script Date: 26/04/2022 11:16:11 am ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [nanc].[Users](
+CREATE TABLE [nc].[Users](
 	[user_id] [varchar](10) NOT NULL,
 	[user_index] [int] IDENTITY(1,1) NOT NULL,
 	[username] [varchar](255) NOT NULL,

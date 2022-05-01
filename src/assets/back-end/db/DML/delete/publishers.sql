@@ -1,7 +1,7 @@
 USE [literatureDB]
 GO
 
-DELETE FROM [nanc].[Publishers]
+DELETE FROM [nc].[Publishers]
       WHERE <Search Conditions,,>
 GO
 

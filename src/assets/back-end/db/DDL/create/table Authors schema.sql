@@ -1,14 +1,14 @@
 USE [literatureDB]
 GO
 
-/****** Object:  Table [nanc].[Authors]    Script Date: 26/04/2022 10:59:45 am ******/
+/****** Object:  Table [nc].[Authors]    Script Date: 26/04/2022 10:59:45 am ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [nanc].[Authors](
+CREATE TABLE [nc].[Authors](
 	[author_id] [varchar](10) NOT NULL,
 	[author_index] [int] IDENTITY(1,1) NOT NULL,
 	[first_name] [varchar](255) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE [nanc].[Authors](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [nanc].[Authors] ADD  CONSTRAINT [DF_Authors_book_count]  DEFAULT ((0)) FOR [book_count]
+ALTER TABLE [nc].[Authors] ADD  CONSTRAINT [DF_Authors_book_count]  DEFAULT ((0)) FOR [book_count]
 GO
 
 

@@ -13,7 +13,9 @@ SELECT [ISBN]
       ,[language]
       ,[image_ref]
       ,[synopsis]
-  FROM [nanc].[Books]
+      ,[page_count]
+      ,[time_added]
+  FROM [nc].[Books]
 
 GO
 

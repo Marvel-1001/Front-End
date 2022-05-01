@@ -8,7 +8,7 @@ SELECT [pub_id]
       ,[address]
       ,[bio]
       ,[book_count]
-  FROM [nanc].[Publishers]
+  FROM [nc].[Publishers]
 
 GO
 
