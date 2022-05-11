@@ -1,14 +1,14 @@
 USE [literatureDB]
 GO
 
-/****** Object:  Table [nanc].[Books]    Script Date: 26/04/2022 11:14:47 am ******/
+/****** Object:  Table [nc].[Books]    Script Date: 28/04/2022 9:34:15 pm ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [nanc].[Books](
+CREATE TABLE [nc].[Books](
 	[ISBN] [varchar](17) NOT NULL,
 	[book_index] [int] IDENTITY(1,1) NOT NULL,
 	[book_name] [varchar](255) NOT NULL,
@@ -21,6 +21,8 @@ CREATE TABLE [nanc].[Books](
 	[language] [varchar](100) NOT NULL,
 	[image_ref] [varchar](500) NULL,
 	[synopsis] [varchar](1000) NULL,
+	[page_count] [int] NULL,
+	[time_added] [datetime2](7) NOT NULL,
  CONSTRAINT [PK_Book] PRIMARY KEY CLUSTERED 
 (
 	[ISBN] ASC
@@ -28,11 +30,11 @@ CREATE TABLE [nanc].[Books](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [nanc].[Books]  WITH CHECK ADD  CONSTRAINT [FK_Book_Publishers] FOREIGN KEY([publisher_id])
-REFERENCES [nanc].[Publishers] ([pub_id])
+ALTER TABLE [nc].[Books]  WITH CHECK ADD  CONSTRAINT [FK_Book_Publishers] FOREIGN KEY([publisher_id])
+REFERENCES [nc].[Publishers] ([pub_id])
 GO
 
-ALTER TABLE [nanc].[Books] CHECK CONSTRAINT [FK_Book_Publishers]
+ALTER TABLE [nc].[Books] CHECK CONSTRAINT [FK_Book_Publishers]
 GO
 
 

@@ -8,7 +8,7 @@ SELECT [author_id]
       ,[bio]
       ,[picture]
       ,[book_count]
-  FROM [nanc].[Authors]
+  FROM [nc].[Authors]
 
 GO
 

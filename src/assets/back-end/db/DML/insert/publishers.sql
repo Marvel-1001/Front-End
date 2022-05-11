@@ -1,7 +1,7 @@
 USE [literatureDB]
 GO
 
-INSERT INTO [nanc].[Publishers]
+INSERT INTO [nc].[Publishers]
            ([pub_id]
            ,[pub_name]
            ,[url]

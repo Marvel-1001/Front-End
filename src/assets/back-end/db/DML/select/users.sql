@@ -8,7 +8,7 @@ SELECT [user_id]
       ,[email]
       ,[avatar]
       ,[type]
-  FROM [nanc].[Users]
+  FROM [nc].[Users]
 
 GO
 

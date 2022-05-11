@@ -1,7 +1,7 @@
 USE [literatureDB]
 GO
 
-INSERT INTO [nanc].[Comments]
+INSERT INTO [nc].[Comments]
            ([comment_id]
            ,[body]
            ,[parentComment_Id]

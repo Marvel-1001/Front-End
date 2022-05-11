@@ -1,7 +1,7 @@
 USE [literatureDB]
 GO
 
-INSERT INTO [nanc].[Users]
+INSERT INTO [nc].[Users]
            ([user_id]
            ,[username]
            ,[pwd_hash]

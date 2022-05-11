@@ -8,7 +8,7 @@ SELECT [comment_id]
       ,[user_id]
       ,[book_id]
       ,[time]
-  FROM [nanc].[Comments]
+  FROM [nc].[Comments]
 
 GO
 

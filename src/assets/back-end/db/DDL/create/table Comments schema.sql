@@ -1,14 +1,14 @@
 USE [literatureDB]
 GO
 
-/****** Object:  Table [nanc].[Comments]    Script Date: 26/04/2022 11:15:11 am ******/
+/****** Object:  Table [nc].[Comments]    Script Date: 26/04/2022 11:15:11 am ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [nanc].[Comments](
+CREATE TABLE [nc].[Comments](
 	[comment_id] [varchar](25) NOT NULL,
 	[comment_index] [int] IDENTITY(1,1) NOT NULL,
 	[body] [varchar](1000) NOT NULL,
@@ -23,11 +23,11 @@ CREATE TABLE [nanc].[Comments](
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [nanc].[Comments]  WITH CHECK ADD  CONSTRAINT [FK_Comments_Comments] FOREIGN KEY([comment_id])
-REFERENCES [nanc].[Comments] ([comment_id])
+ALTER TABLE [nc].[Comments]  WITH CHECK ADD  CONSTRAINT [FK_Comments_Comments] FOREIGN KEY([comment_id])
+REFERENCES [nc].[Comments] ([comment_id])
 GO
 
-ALTER TABLE [nanc].[Comments] CHECK CONSTRAINT [FK_Comments_Comments]
+ALTER TABLE [nc].[Comments] CHECK CONSTRAINT [FK_Comments_Comments]
 GO
 
 

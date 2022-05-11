@@ -1,7 +1,7 @@
 USE [literatureDB]
 GO
 
-DELETE FROM [nanc].[Comments]
+DELETE FROM [nc].[Comments]
       WHERE <Search Conditions,,>
 GO
 
