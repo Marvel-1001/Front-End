@@ -42,6 +42,9 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { LoginComponent } from './login/login.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
@@ -58,6 +61,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     BookshelfComponent,
     BookContentComponent,
     FooterComponent,
+    LoginComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +78,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MDBBootstrapModule.forRoot(),
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,

@@ -1,0 +1,30 @@
+<main class="form-signin">
+    <form [formGroup]="newmyForm">
+      <img class="mb-4" src="nacn.jpeg" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+  
+      <mat-form-field class="form-floating">
+        <input matInput formControlName="name" id="floatingInput" placeholder="name@example.com" autocomplete>
+        <label for="floatingInput">Username</label>
+
+        <mat-error *ngIf="email">
+            Please enter valid username
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-floating">
+        <input matInput formControlName="password" id="floatingPassword" placeholder="password">
+        <label for="floatingPassword">Password</label>
+
+        <mat-hint align="end">Must have capital letter, number and sign</mat-hint>
+
+        <mat-error *ngIf="password" class="has-text">
+            The password is wrong
+        </mat-error>
+
+      </mat-form-field>
+  
+      <button mat-raised-button [disabled]="newmyForm.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+    </form>
+</main>

@@ -1,0 +1,8 @@
+# This is a dummy database for the actual database
+# The scripts range from creation of the schema to CRUD operations
+
+
+# The dummy database may not accurately represent the actual schema as the database design kept changing
+  changing frequently.
+
+# I used the online database hosting site : https://www.freesqldatabase.com/
