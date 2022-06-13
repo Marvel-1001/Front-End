@@ -12,20 +12,4 @@ export class AddbookComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  imageOne = 'assets/books/imgOne.png';
-  imageAlt = 'Book';
-
-  imageTwo = 'assets/books/img2.png';
-  
-  imageThree = 'assets/books/imgThree.png';
-  
-  imageFour = 'assets/books/imgFour.png';
-
-  imageFive = 'assets/books/imgFive.png';
-
-  imageSix = 'assets/books/imgSix.png';
-
-  imageSeven = 'assets/books/imgSeven.png';
-
-  imageEight = 'assets/books/imgEight.png';
 }

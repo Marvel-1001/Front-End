@@ -1,22 +1,40 @@
-.pro {
-  width: 23%;
-  min-width: 250px;
-  padding: 10px 12px;
-  border-radius: 0;
-  border: 1px solid #cce7d0;
-  cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  margin: 15px 0;
-  transition: 0.2s ease;
+.col-2 img {
+  padding: 50px 0;
 }
-.pro {
-  width: 23%;
-  min-width: 250px;
-  padding: 10px 12px;
-  border-radius: 0;
-  border: 1px solid #cce7d0;
-  cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
-  margin: 15px 0;
-  transition: 0.2s ease;
+
+.picsum-img-wrapper {
+
+  max-height: 70vh;
+  max-width: 100%;
+  margin: auto;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: #563434;
+}
+
+img {
+  width: 960px;
+  height: 550px;
+}
+
+ngb-carousel {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

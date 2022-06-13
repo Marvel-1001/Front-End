@@ -7,11 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
- 
   constructor() { }
 
   ngOnInit(): void {
   }
- login = 'assets\img\carousel1.jpg';
- Alt = 'img';
+
+  images = ['../../assets/carousel/1.jpg', '../../assets/carousel/Two.jpg', '../../assets/carousel/3.jpg'];
 }

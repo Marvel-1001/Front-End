@@ -1,50 +1,43 @@
 <div class="wrapper">
-  <form [formGroup]="myForm" class="form" (ngSubmit)="onSubmit()">
+    <form #bookDetails="ngForm" class="form" (ngSubmit)="onSubmit()">
       <div class="wrapperThree">
   
-      <div >
-          <mat-label><header><b>Book Cover</b></header></mat-label>
+        <div>
+          <mat-label>
+            <header><b>Book Cover</b></header>
+          </mat-label>
           <br>
-          <input 
-              formControlName="file"
-              id="file" 
-              type="file" 
-              class="form-control"
-              (change)="onFileChange($event)">
-              <span style="color:red" *ngIf="image && image.invalid && image.touched">Image is required</span>
-      </div>
-      <div style="width: 120px; height:170px; background:gray; margin:10px">
-      <img [src]="imageSrc" *ngIf="imageSrc" style="height: 170px; width:120px; margin: auto;" >
-      </div>
-      <button class="btn btn-primary" type="onSubmit">Upload Cover file</button>
-              </div>
-              <div class="wrapperThree">
-                  <header class="head"><b>ISBN Number</b></header>
-                    <br>
-                      <div class="form-group">
-                          <p>You can provide the ISBN number.</p>
-                            <br>
-                              <mat-label for="exampleInputNumber1">ISBN Number <a>(optional)</a></mat-label>
-                              <input matInput type="number" class="form-control" id="exampleInputNumber1" name="numberValue" ngModel>
-                              <mat-label form="Publisher">Publisher <a>(optional)</a></mat-label>
-                              <input matInput class="form-control" type="text" id="exampleInputName" name="bookpublisher" ngModel>
-                              <mat-label for="exampleInputNumber1">Year</mat-label>
-                              <br>
-                                <input type="date" id="start" name="trip-start"
-                                      value=""
-                                      min="1949-12-31" max="2099-12-31">
-                      </div>
-              </div>
+          <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
   
-              <div class="wrapperThree">
-                <header class="head"><b>Terms and Conditions</b></header>
-                <p style="float:center">Still to find out T's&C's </p>
+        </div>
+        <div style="width: 120px; height:170px; background:gray; margin:10px">
+          <img [src]="imageSrc" *ngIf="imageSrc" style="height: 170px; width:120px; margin: auto;">
+        </div>
+        <button class="btn btn-primary" type="onSubmit">Upload Cover file</button>
+      </div>
+      <div class="wrapperThree">
+        <header class="head"><b>ISBN Number</b></header>
+        <br>
+        <div class="form-group">
+          <p>You can provide the ISBN number.</p>
+          <br>
+          <mat-label for="exampleInputNumber1">ISBN Number <a>(optional)</a></mat-label>
+          <input matInput type="number" class="form-control" id="exampleInputNumber1" name="numberValue" ngModel>
+          <mat-label form="Publisher">Publisher <a>(optional)</a></mat-label>
+          <input matInput class="form-control" type="text" id="exampleInputName" name="bookpublisher" ngModel>
+          <mat-label for="exampleInputNumber1">Year</mat-label>
+          <br>
+          <input type="date" id="start" name="trip-start" value="" min="1949-12-31" max="2099-12-31">
+        </div>
+      </div>
   
-              </div>
-      
-  </form>
+      <div class="wrapperThree">
+        <header class="head"><b>Terms and Conditions</b></header>
+        <p style="float:center">Still to find out T's&C's </p>
+  
+      </div>
+      <button class=" btn btn-primary" type="submit">Save</button>
+    </form>
   </div>
   
   <router-outlet></router-outlet>
-  
-  

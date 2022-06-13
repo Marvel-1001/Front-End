@@ -3,97 +3,53 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
+import { BooksComponent } from './books/books.component';
 import { HomeComponent } from './home/home.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AddbookComponent } from './addbook/addbook.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-
-
-
-import { SearchComponent } from './search/search.component';
-import { CarouselComponent } from './carousel/carousel.component';
-import { BookshelfComponent } from './bookshelf/bookshelf.component';
-import { BookContentComponent } from './book-content/book-content.component';
-import { FooterComponent } from './footer/footer.component';
-import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
-import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
-import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
-import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
-import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
-import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
-import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
-import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
-import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
-import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
-import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
-import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
-import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
-import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
-import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { LoginComponent } from './login/login.component';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SignInComponent } from './sign-in/sign-in.component';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookshelfComponent } from './bookshelf/bookshelf.component';
+import { BookContentComponent } from './book-content/book-content.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FooterComponent } from './footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AuthModule } from './auth/auth.module';
+import { LandingComponent } from './landing/landing.component';
+import { ValueComponent } from './value/value.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddbookComponent,
-    NavbarComponent,
+    BooksComponent,
     HomeComponent,
-    AboutUsComponent,
-    ContactUsComponent,
-    SearchComponent,
-    CarouselComponent,
+    NavbarComponent,
+    BookDetailComponent,
+    AddbookComponent,
     BookshelfComponent,
     BookContentComponent,
     FooterComponent,
-    LoginComponent,
-    SignInComponent
+    SignInComponent,
+    LandingComponent,
+    ValueComponent,
+    CarouselComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonToggleModule,
-    MatButtonModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MDBBootstrapModule.forRoot(),
-    MdbAccordionModule,
-    MdbCarouselModule,
-    MdbCheckboxModule,
-    MdbCollapseModule,
-    MdbDropdownModule,
-    MdbFormsModule,
-    MdbModalModule,
-    MdbPopoverModule,
-    MdbRadioModule,
-    MdbRangeModule,
-    MdbRippleModule,
-    MdbScrollspyModule,
-    MdbTabsModule,
-    MdbTooltipModule,
-    MdbValidationModule
+    BrowserModule,AppRoutingModule,MatIconModule,MatButtonModule,BrowserAnimationsModule,
+    MatFormFieldModule,FormsModule,ReactiveFormsModule, NgbModule,MatInputModule,
+    FontAwesomeModule, AuthModule,HttpClientModule,MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

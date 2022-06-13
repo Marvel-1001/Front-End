@@ -1,15 +1,33 @@
-<mat-toolbar color="primary">
-    <span>NACN</span>
-
-    <div class="toggle-collapse">
-        <div class="toggle-icons">
-            <i class="fas fa-bars"></i>
-        </div>
+<body>
+  <!------------------ Header ------------------>
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <a href="home"><img class="logo" src="assets/logo/logo.png" alt=""></a>
+        <!----------  Nav Bar ------------------>
+        <nav> 
+          
+          <ul id="MenuItems">
+            <li><a [routerLink]="['/home/']">Home</a></li>
+            <li><a [routerLink]="['/books/']">Books</a></li>
+            <li><a mat-raised-button [routerLink]="['sign-in']" routerLinkActive="active">Sign in</a></li>
+          </ul>
+        </nav>
+        <img src="assets/img/menu.png" class="menu-icon" onclick="menutoggle()" />
+      </div>
+      
     </div>
-    <div class="spacer"></div>
-
-    <a mat-button routerLink="home">Home</a>
-    <a mat-button routerLink="about-us">About Us</a>
-    <a mat-button routerLink="contact-us">Contact Us</a>
-    <a mat-raised-button color="white" routerLink="sign-in">Login</a>
-</mat-toolbar>
+  </div>
+  <!---------------------Javascript toggle menu----------------------->
+  <script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle() {
+      if (MenuItems.style.maxHeight == "0px") {
+        MenuItems.style.maxHeight = "200px";
+      } else {
+        MenuItems.style.maxHeight = "0px";
+      }
+    }
+  </script>
+</body>

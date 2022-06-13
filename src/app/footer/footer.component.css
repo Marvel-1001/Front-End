@@ -5,30 +5,62 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
-  /* Add a hover effect if you want */
-span{
+
+/* Add a hover effect if you want */
+
+span {
     color: black;
 }
 
 .fa:hover {
     opacity: 0.5;
     color: rgb(37, 34, 34);
-  }
+}
 
-  /* Facebook */
+
+/* Facebook */
+
 .fa-facebook {
     color: rgb(0, 0, 0);
-  }
+}
 
-  /* Twitter */
+
+/* Twitter */
+
 .fa-twitter {
     color: rgb(0, 0, 0);
-  }
-  
-  /*Instagram*/
+}
+
+
+/*Instagram*/
+
 .fa-instagram {
     color: rgb(0, 0, 0);
-  }
-  
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    color: rgb(0, 0, 0);
+}
+
+.fa-twitter {
+    color: rgb(0, 0, 0);
+}
+
+.fa-instagram {
+    color: rgb(0, 0, 0);
+}

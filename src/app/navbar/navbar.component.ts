@@ -11,8 +11,5 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  onLogout(){
-    
-  }
+  images = ['../../asstes/logo/logo.png'];
 }

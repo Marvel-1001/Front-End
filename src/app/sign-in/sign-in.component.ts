@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { FormGroup, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -11,24 +10,10 @@ export class SignInComponent implements OnInit {
 
   constructor() { }
 
-  loginForm = new FormGroup({
-    username:new FormControl('', [Validators.required, Validators.email]),
-    password:new FormControl('', [Validators.required, Validators.minLength(10)])
-  })
-
-  loginUser(){
-    console.warn(this.loginForm.value)
-  }
-
-  get username(){
-    return this.loginForm.get('username')
-  }
-
-  get password(){
-    return this.loginForm.get('password')
-  }
-
   ngOnInit(): void {
   }
-
+  onSubmit(forms: NgForm){
+    console.log(forms.value);
+    console.log(forms.valid);
+  }
 }

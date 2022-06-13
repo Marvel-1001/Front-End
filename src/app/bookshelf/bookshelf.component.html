@@ -1,123 +1,122 @@
-            <div class="wrapper">
-              
-                <form [formGroup]="bookForm" class="form" (ngSubmit)="onSubmit()" >
-                
-                      <div class="wrapperOne">
-                        <h4><b>Language</b></h4>
-                        
-                        <div class="input_field">
-                            <p>Choose the language in which the book was written</p>
-                        
-                              <div>
-                            
-                                <mat-label>Language</mat-label>
-                            
-                                  <div class="custom_select">
-                                      <select>
-                                          <option value="english">English</option>
-                                          <option value="nama">Nama</option>
-                                          <option value="damara">Damara</option>
-                                          <option value="oshindonga">Oshindonga</option>
-                                          <option value="oshikwanyama">Oshikwanyama</option>
-                                      </select>
-                                  
-                                  </div>
-                              </div>
-                        </div>
-                      </div>
-                    <div class="wrapperTwo">
-                        <h4><b>Book Title</b></h4>
-                        
-                          
-                              <div class="form-group">
-                                <p>Enter the book title as it appears on the cover</p>
-                                    <br>
-                                    <mat-label for="bookTitle">Book Title</mat-label>
-                                    <input matInput class="form-control" formControlName="title" type="text" name="bookTitle" ngModel>
-                                    <span style="color:red" *ngIf="title && title.invalid && title.touched">Title is required</span>
-                                    <br>
-                                    <mat-label form="subtitle">Subtitle <a>(optional)</a></mat-label>
-                                    <input matInput class="form-control" type="text" name="bookSubtitle" ngModel>
-                                </div>
-                          </div>
-               
-                  <div class="wrapperThree">
-                      <header class="head"><b>Edition Number</b></header>
-                        <br>
-                          <div class="form-group">
-                              <p>Enter the edition number as it appears on the cover</p>
-                                <br>
-                                  <mat-label for="exampleInputNumber1">Edition Number <a>(optional)</a></mat-label>
-                                  <input matInput type="number" class="form-control" name="numberValue" ngModel>
-                          </div>
-                  </div>
-                  <div class="wrap">
-                      <header><b>Author</b></header>
-                        <br>
-                          <mat-label for="primaryAuthor">Primary Author or Contributor</mat-label>
-                        <br>
-                          <input matInput type="text" formControlName="author" class="form-control" name="authorName">
-                          <span style="color:red" *ngIf="author && author.invalid && author.touched">Author is required</span>
-                  </div>
-                  <div class="wrapC">
-                      <header><b>Contributor</b></header>
-                        <br>
-                          <mat-label for="contributor">Contributor <a>(optional)</a></mat-label>
-                        <br>
-                        <br>
-                        <form action="#">
-                          
-                    </form>
+<div class="wrapper">
 
-                   <div *ngFor="let contributor of contributors">
-                    <select name="contributors" id="contributor">
-                      <option value="select">Select type of contributor</option>
-                      <option value="Author">Author</option>
-                      <option value="Editor">Editor</option>
-                      <option value="Foreword">Foreword</option>
-                      <option value="Illustrator">Illustrator</option>
-                      <option value="Narrator">Narrator</option>
-                      <option value="Photographer">Photographer</option>
-                      <option value="Preface">Preface</option>
-                      <option value="Translator">Translator</option>
-                      <option value="Introduction">Introduction</option>
-                    </select>
-                    <input type="text" id = "first-name" placeholder="first name">
-                    <input type="text" id = "last-name" placeholder="last name">
-                   </div>
+  <form #bookDetails="ngForm" class="form" (ngSubmit)="onSubmit()">
 
+    <div class="wrapperOne">
+      <h4><b>Language</b></h4>
 
+      <div class="input_field">
+        <p>Choose the language in which the book was written</p>
 
-                          <button type="button" class="btn remove"  (click)="addAuthor('Remove')">Remove</button>
-                          <button type="button"  class="btn remove" (click)="addAuthor('Add')" >Add Another</button>&nbsp;
-                          
-                  </div>
-                  <div class="wrapper4">
-                      <header><b>Synopsis</b></header>
-                        <br>
-                          <p>Enter the synopsis of the book</p>
-                            <mat-label>Synopsis</mat-label>
-                            <textarea matInput></textarea>
-                            <span style="color:red" *ngIf="synopsis && synopsis.invalid && synopsis.touched">Synopsis is required</span>
-                  </div>
-                  <div class="wrapper5">
-                      <header><b>Keywords</b></header>
-                        <br>
-                          <p>Enter 3 keywords from the book.</p>
-                        <br>
-                            <mat-label>keywords</mat-label>
-                          
-                            <input matInput type="text">
-                        
-                            <input matInput type="text">
-                      
-                            <input matInput type="text">
-                  </div>
-                
-                <button class="btn-btn-primary" md-button md-raised-button [routerLink]="['/book-content/']" [disabled]="bookForm.invalid"> Save and Continue</button>
-                  <!-- The routed views render in the <router-outlet>-->
-                  <router-outlet></router-outlet>
-              </form>
-          
+        <div>
+
+          <mat-label>Language</mat-label>
+
+          <div class="custom_select">
+            <select>
+              <option value="english">English</option>
+              <option value="nama">Nama</option>
+              <option value="damara">Damara</option>
+              <option value="oshindonga">Oshindonga</option>
+              <option value="oshikwanyama">Oshikwanyama</option>
+            </select>
+
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapperTwo">
+      <h4><b>Book Title</b></h4>
 
+      <div class="form-group">
+        <p>Enter the book title as it appears on the cover</p>
+        <br>
+        <mat-label for="bookTitle">Book Title</mat-label>
+        <input matInput class="form-control" formControlName="title" type="text" name="bookTitle" ngModel>
+        <span style="color:red" *ngIf="title && title.invalid && title.touched">Title is required</span>
+        <br>
+        <mat-label form="subtitle">Subtitle <a>(optional)</a></mat-label>
+        <input matInput class="form-control" type="text" id="exampleInputName" name="bookSubtitle" ngModel>
+      </div>
+    </div>
+
+    <div class="wrapperThree">
+      <header class="head"><b>Edition Number</b></header>
+      <br>
+      <div class="form-group">
+        <p>Enter the edition number as it appears on the cover</p>
+        <br>
+        <mat-label for="exampleInputNumber1">Edition Number <a>(optional)</a></mat-label>
+        <input matInput type="number" class="form-control" name="numberValue" ngModel>
+      </div>
+    </div>
+    <div class="wrap">
+      <header><b>Author</b></header>
+      <br>
+      <mat-label for="primaryAuthor">Primary Author or Contributor</mat-label>
+      <br>
+      <input matInput type="text" formControlName="author" class="form-control" name="authorName">
+      <span style="color:red" *ngIf="author && author.invalid && author.touched">Author is required</span>
+    </div>
+    <div class="wrapC">
+      <header><b>Contributor</b></header>
+      <br>
+      <mat-label for="contributor">Contributor <a>(optional)</a></mat-label>
+      <br>
+      <br>
+      <form action="#">
+
+      </form>
+      <div *ngFor="let contributor of contributors">
+        <select name="contributors" id="contributor">
+          <option value="select">Select type of contributor</option>
+          <option value="Author">Author</option>
+          <option value="Editor">Editor</option>
+          <option value="Foreword">Foreword</option>
+          <option value="Illustrator">Illustrator</option>
+          <option value="Narrator">Narrator</option>
+          <option value="Photographer">Photographer</option>
+          <option value="Preface">Preface</option>
+          <option value="Translator">Translator</option>
+          <option value="Introduction">Introduction</option>
+        </select>
+        <input type="text" id="first-name" placeholder="first name">
+        <input type="text" id="last-name" placeholder="last name">
+      </div>
+
+      <button type="button" class="btn remove" (click)="addAuthor('Remove')">Remove</button>
+      <button type="button" class="btn remove" (click)="addAuthor('Add')">Add Another</button>&nbsp;
+
+    </div>
+
+    <div class="wrapper4">
+      <header><b>Synopsis</b></header>
+      <br>
+      <p>Enter the synopsis of the book</p>
+      <mat-label>Synopsis</mat-label>
+      <textarea matInput required></textarea>
+      <span style="color:red" *ngIf="synopsis && synopsis.invalid && synopsis.touched">Synopsis is required</span>
+    </div>
+
+    <div class="wrapper5">
+      <header><b>Keywords</b></header>
+      <br>
+      <p>Enter 3 keywords from the book.</p>
+      <br>
+      <mat-label>keywords</mat-label>
+
+      <input matInput type="text">
+
+      <input matInput type="text">
+
+      <input matInput type="text">
+    </div>
+
+    <button class="btn-btn-primary" md-button md-raised-button [routerLink]="['/book-content/']"
+      > Save and
+      Continue</button>
+    <!-- The routed views render in the <router-outlet>-->
+    <router-outlet></router-outlet>
+  </form>
+
+</div>

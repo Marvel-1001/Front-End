@@ -1,47 +1,62 @@
 <head>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+
+  <!-- Custom styles for this template -->
+
 </head>
 
 <body class="text-center">
-    
-    <main class="form-signin">
-      <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
-        <img class="mb-4" src="../assets/logo/logo.png" alt="" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    
-        <div class="form-floating">
-          <input type="email" class="form-control" formControlName="username"  placeholder="name@example.com">
-          <span style="color:red" *ngIf="username && username.invalid && username.touched">input field not valid</span>
-          <label for="floatingInput">Email</label>
 
-        </div>
-        
-        <div class="form-floating">
-          <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <span style="color:red" *ngIf="password && password.invalid && password.touched">Password input field invalid</span>
-          <label for="floatingPassword">Password</label>
-        </div>
-    
-        <button class="w-100 btn btn-lg btn-primary" type="submit" routerLink="bookshelf" [disabled]="loginForm.invalid">Sign in</button>
-        
-      </form>
-    </main>   
+  <main class="form-signin">
+    <form #forms="ngForm" (ngSubmit)="onSubmit(forms)">
+      <img class="mb-4" src="assets/images/nacn.png" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please Sign into the Database</h1>
+
+      <div class="form-group">
+        <mat-label class="loginUsername">Username</mat-label>
+        <input type="text" 
+              name="username" 
+              ngModel 
+              required 
+              #username="ngModel" 
+              class="form-control"
+              placeholder="username">
+
+      </div>
+      <div class="form-group">
+        <label class="loginPassword">Password</label>
+        <input type="password" 
+              name="password" 
+              ngModel 
+              required 
+              class="form-control" id="floatingPassword"
+          placeholder="Password">
+
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" [disabled]="forms.invalid"
+        [routerLink]="['/bookshelf/']">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+    </form>
+  </main>
+
+
+
 </body>
-        

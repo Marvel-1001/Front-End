@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Front-End": {
+    "BookPage": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/front-end",
+            "outputPath": "dist/book-page",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,13 +27,11 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/chart.js/dist/chart.js",
-              "node_modules/chart.js/dist/chart.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -72,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Front-End:build:production"
+              "browserTarget": "BookPage:build:production"
             },
             "development": {
-              "browserTarget": "Front-End:build:development"
+              "browserTarget": "BookPage:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Front-End:build"
+            "browserTarget": "BookPage:build"
           }
         },
         "test": {
@@ -107,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "Front-End"
+  "defaultProject": "BookPage"
 }
